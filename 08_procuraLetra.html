@@ -5,12 +5,17 @@
 
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
-    //ENTRADA
+let palavra = prompt("Digite uma palavra:");
 
+let letra = prompt("Digite a letra que deseja encontrar na palavra:");
 
-    //PROCESSAMENTO
+let posicao = palavra.indexOf(letra);
 
+if (posicao !== -1) {
+    alert(`A letra ${letra} foi encontrada na palavra e está na posição ${posicao + 1} (considerando a contagem começando em 1).`);
+} else {
+    alert(`A letra ${letra} não foi encontrada na palavra.`);
+}
 
-    //SAÍDA
 
 </script>

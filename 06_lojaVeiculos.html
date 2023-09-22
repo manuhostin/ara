@@ -9,12 +9,32 @@
 
     //Apresente a lista final de cada tipo de veículo.
 
-    //ENTRADA
+let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+let carrosHatch = ["308", "Focus", "i30"];
 
+for (let i = 0; i < 3; i++) {
+    let tipoCarro = prompt("Insira tipo de carro você deseja adicionar? (SUV, Sedan, Hatch)").toLowerCase();
+    let nomeCarro = prompt("Insira o nome do carro que você deseja adicionar?");
 
-    //PROCESSAMENTO
+    switch(tipoCarro.toLowerCase()) {
+        case 'suv':
+            carrosSUV.push(nomeCarro);
+            break;
+        case 'sedan':
+            carrosSedan.push(nomeCarro);
+            break;
+        case 'hatch':
+            carrosHatch.push(nomeCarro);
+            break;
+        default:
+            alert("Esse tipo de carro não tem");
+            break;
+    }
+}
 
-
-    //SAÍDA
+alert(`Lista final de SUVs: ${carrosSUV.join(', ')}`);
+alert(`Lista final de Sedans: ${carrosSedan.join(', ')}`);
+alert(`Lista final de Hatchs: ${carrosHatch.join(', ')}`);
 
 </script>
